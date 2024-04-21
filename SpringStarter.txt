@@ -1,0 +1,71 @@
+In application.properties files 
+
+# DataSource Configuration
+spring.datasource.url=jdbc:mysql://localhost:3306/Student
+spring.datasource.username=root
+spring.datasource.password=saad4110
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+# JPA Configuration
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+
+// Configuration for mail sending
+pring.mail.host=smtp.example.com
+spring.mail.port=587
+spring.mail.username=khawajasaadqayyum4110@gmail.com
+spring.mail.password=whzumasesalivmad
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+// mail config ended
+
+
+// to Handle CORS Error create new class in your spring boot pkg
+@Configuration
+public class CorsConfig implements WebMvcConfigurer {
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+                .allowedOrigins("http://localhost:5173") // Update with your Vue.js application's origin
+                .allowedMethods("GET", "POST", "PUT", "DELETE")
+                .allowCredentials(true);
+    }
+
+// Ended
+
+eport to CSV file
+    exportToCSV() {
+    const csvContent = "data:text/csv;charset=utf-8,"
+      + this.employees.map(row => Object.values(row).join(",")).join("\n");
+
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", "table_data.csv");
+    document.body.appendChild(link);
+
+    link.click();
+  },
+// ended
+
+
+Github push method to add projects on github
+  Easy-to-follow steps: git pull origin master or main will give a fatal error:
+
+Couldn't find remote ref main
+
+So below steps will work just fine.
+
+git init
+git add .
+git commit -m "initial commit"
+git remote add origin https://github.com/yourusername/your-repo-name.git   // link our local repo with remote repo
+git branch -M main
+git push -u origin main
+
+
+
+git recovery code
+
+9aea1-5e00d88afb-16c2fca337-8db0a6f477-f13b24f2c4-afe725573b-91ad9fc4f4-60d73b2a6a-abc9b38a9d-769b9cfb4f-9d0b157a54-efbef27446-3d4d2d1dca-eccd7471cc-32e016be55-0e02871fc1-04d3a
