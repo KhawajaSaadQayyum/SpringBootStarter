@@ -1,0 +1,34 @@
+git --version
+git config --global user.name "Write the name" //to add name
+git config --global user.email "Write the email//to add email
+git config --global --list   //
+
+git status // to check the status of git repo
+
+git init // will create master branch by default
+
+git init -b main // will create main branch
+
+git log // to check the stages of of current repo
+
+git commit -m "This is my first commit" // after adding files means after staging 
+
+git commit -a -m "This is my first commit and i have skip the staging " // If you want to skip the staging
+
+git diff // is used to check the difference between old commit
+
+git clone http://        // Close is basically coping something
+
+git branch -M main // to create main branch
+
+ssh-keygen -o // to generate SSH key  over ssh key will be generated. to key ssh key 
+
+cat id_rsa.pub // to get SSH key 
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDDiQXOAZEmrfSue56EbOtKNOyDZlDYtg45eN2DwZnH7DE6+jZV8UVaO1a6f3aY+ExOkqbTZ68HsAHskSjq6tpcqW1bRS2bIElnBSp2hOPyhjKK11EwGaobKpoxUtKPf3cF6IgqWHh2zCmDA0xsPCVUlh9RiJ20W7f0cV5cS8TCfhKltdOYKO1Lsq4gLHz7by1+6PsePqlR/VuNbz7SUMxg9qL+UXdnrb6Uio4j7KMtPvqFUeYjc4Jh5DJUrMk4KPCnoBXGNu6+VmqjC+40gMEqKuNgLGdwsmH4027PsCPgtK+aa5p8ZXYKhu2Rf7ME8cAfQhBOgURd8tT1u5CFS8NLR1Ezy40h3fsN0NAvkDShhytR8OGY1lcPPYLwoD/K4e2poBma6TEhNJGRbmJW8czwGK/ZDe3ZdSCYboW3NeN/V5jXYJ9q/8g1WRI5zSkciZbyfEiPcgTXB2pKdJiHQEBhML1Uki4HvfoDIc38umTRsET4FAeH3H7fU1gVWT1te4k= saad qayyum@DESKTOP-NHNSSAQ         // this is my SSH key
+
+we all paste SSH in our git setting SSH key
+
+->> pwd // cmd to check present working directory
+
+->> mkdir  // cmd to create file
