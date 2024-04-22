@@ -15,7 +15,7 @@ git commit -m "This is my first commit" // after adding files means after stagin
 
 git commit -a -m "This is my first commit and i have skip the staging " // If you want to skip the staging
 
-git push -u origin main // to push the code from local to remote 
+git push -u origin main // to push the code from local to remote
 git diff // is used to check the difference between old commit
 
 git clone http://        // Close is basically coping something
@@ -33,3 +33,7 @@ we all paste SSH in our git setting SSH key
 ->> pwd // cmd to check present working directory
 
 ->> mkdir  // cmd to create file
+
+ git checkout/switch -b branchName  //TO create a new branch
+
+  git branch  // to check the number of branches
