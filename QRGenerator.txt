@@ -1,0 +1,26 @@
+// for creating QR generator project
+// we have to install two dependencies
+// 1. "npm i inquirer" for user input
+//2. "npm i qr-image" for converting user input into image
+
+import fs from "fs"
+import input from "inquirer"
+import qr from "qr-image"
+import { onErrorResumeNextWith } from "rxjs";
+
+input.prompt({
+    message:"Ener the URL",
+    name:"URL"
+}).then((answer)=>{
+    const url= answer.URL;
+    const image=qr.image(url);
+    image.pipe(fs.createWriteStream("image2.png"));
+
+    fs.writeFile("url.tex", url ,(err)=>{
+        if(err)
+        throw onErrorResumeNextWith
+        console.log("File Saveed")
+    })
+})
+
+

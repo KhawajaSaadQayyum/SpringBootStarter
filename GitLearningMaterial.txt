@@ -44,5 +44,5 @@ we all paste SSH in our git setting SSH key
 
  git branch -all // to check all remote and local branches
 
-
+git pull origin main // cmd to pull the code // we should always pull the code before pushing
 git merge branchName // to merge the branch with branch in which we are currently
