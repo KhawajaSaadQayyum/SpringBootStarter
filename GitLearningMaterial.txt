@@ -46,3 +46,7 @@ we all paste SSH in our git setting SSH key
 
 git pull origin main // cmd to pull the code // we should always pull the code before pushing
 git merge branchName // to merge the branch with branch in which we are currently
+
+git stash // git stach if you want to save the code without commit
+
+git satch list // to show the code of stash
