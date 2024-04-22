@@ -37,3 +37,9 @@ we all paste SSH in our git setting SSH key
  git checkout/switch -b branchName  //TO create a new branch
 
   git branch  // to check the number of branches
+ 
+ git switch - // cmd to go back to previous branch
+
+ git branch -d branchName // to delete the branch
+
+ git branch -all // to check all remote and local branches
