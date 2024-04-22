@@ -43,3 +43,6 @@ we all paste SSH in our git setting SSH key
  git branch -d branchName // to delete the branch
 
  git branch -all // to check all remote and local branches
+
+
+git merge branchName // to merge the branch with branch in which we are currently
