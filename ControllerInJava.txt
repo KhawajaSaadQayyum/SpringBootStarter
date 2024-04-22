@@ -1,0 +1,42 @@
+
+@RestController
+@RequestMapping("/employees")
+public class EmployeeController {
+    @Autowired
+    private EmployeeRepository employeeRepository;
+    // Get all employees
+    @GetMapping("/get")
+    public List<EmployeeEntity> getAllEmployees() {
+        return employeeRepository.findAll();
+    }
+
+    // Create a new employee
+    @PostMapping("/add")
+    public String createEmployee(@RequestBody EmployeeEntity employee) {
+       employeeRepository.save(employee);
+       return "Add Successfully";
+    }
+    // Update an existing employee
+    @PutMapping("/update/{id}")
+    public String updateEmployee(@PathVariable Long id, @RequestBody EmployeeEntity employeeDetails) {
+        EmployeeEntity employee = employeeRepository.findById(id).orElseThrow(() -> new RuntimeException("Employee not found with id: " + id));
+        employee.setFirstName(employeeDetails.getFirstName());
+        employee.setLastName(employeeDetails.getLastName());
+        employee.setEmail(employeeDetails.getEmail());
+        employee.setNationality(employeeDetails.getNationality());
+        employee.setCompanyName(employeeDetails.getCompanyName());
+        employee.setDateOfBirth(employeeDetails.getDateOfBirth());
+        employee.setPassportIssueDate(employeeDetails.getPassportIssueDate());
+        employee.setPassportExpiryDate(employeeDetails.getPassportExpiryDate());
+
+
+        employeeRepository.save(employee);
+        return "Record Edited Successfully";
+    }
+    // Delete an employee
+    @DeleteMapping("/delete/{id}")
+    public String deleteEmployee(@PathVariable Long id) {
+        employeeRepository.deleteById(id);
+        return "Deleted Successfully";
+    }
+}
